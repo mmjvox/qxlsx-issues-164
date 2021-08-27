@@ -12,8 +12,7 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    QXlsx::Document xlsxR;
-    xlsxR.readExcelFile("./Datalistsss.xlsx");
+    QXlsx::Document xlsxR("./Datalistsss.xlsx");
 
     qDebug()<<xlsxR.sheetNames();
 

@@ -12,12 +12,15 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    QXlsx::Document xlsxR;
-    xlsxR.readExcelFile("./Datalistsss.xlsx");
+    QXlsx::Document xlsxR1("./Datalistsss.xlsx");
 
-    qDebug()<<xlsxR.sheetNames();
+    qDebug()<<xlsxR1.sheetNames();
 
-    qDebug()<<xlsxR.selectSheet("DATA");
+    qDebug()<<xlsxR1.selectSheet("DATA");
 
-    return a.exec();
+    qDebug()<<xlsxR1.dimension().rowCount() << xlsxR1.dimension().lastRow();
+
+    qDebug()<<xlsxR1.cellAt(5,3)->value();
+
+    return 0;//a.exec();
 }

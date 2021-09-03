@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    QXlsx::Document xlsxR1("./Datalistsss.xlsx");
+    QXlsx::Document xlsxR1(QString(SOURCE_PATH)+"/Datalistsss.xlsx");
 
     qDebug()<<xlsxR1.sheetNames();
 

@@ -3,6 +3,7 @@ QT -= gui
 CONFIG += c++11 console
 CONFIG -= app_bundle
 
+DEFINES += SOURCE_PATH=\\\"$$PWD\\\"
 
 include($$PWD/QXlsx/QXlsx.pri)
 
